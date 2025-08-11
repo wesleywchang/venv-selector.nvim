@@ -79,6 +79,10 @@ function M.get_default_searches()
                     command = "$FD '/python$' ~/miniconda3/bin --no-ignore-vcs --full-path --color never",
                     type = "anaconda",
                 },
+                micromamba = {
+                    command = "$FD '/python$' ~/mamba/envs --no-ignore-vcs --full-path --color never",
+                    type = "anaconda",
+                },
                 pipx = {
                     command =
                     "$FD '/bin/python$' ~/.local/share/pipx/venvs ~/.local/pipx/venvs --no-ignore-vcs --full-path --color never",
@@ -130,6 +134,10 @@ function M.get_default_searches()
                     command = "$FD '/python$' ~/miniconda3/bin --no-ignore-vcs --full-path --color never",
                     type = "anaconda",
                 },
+                micromamba = {
+                    command = "$FD '/python$' ~/mamba/envs --no-ignore-vcs --full-path --color never",
+                    type = "anaconda",
+                },
                 pipx = {
                     command =
                     "$FD '/bin/python$' ~/.local/share/pipx/venvs ~/.local/pipx/venvs --no-ignore-vcs --full-path --color never",
@@ -179,6 +187,13 @@ function M.get_default_searches()
                 },
                 miniconda_base = {
                     command = "$FD miniconda3//python.exe $HOME/miniconda3 --no-ignore-vcs --full-path -a --color never",
+                    type = "anaconda",
+                },
+                -- based on micromamba installed from https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html#windows
+                -- assume installation with $ROOT_PREFIX "micromamba"
+                -- doesnt work
+                micromamba = {
+                    command = "$FD micromamba//python.exe $HOME/micromamba/envs --no-ignore-vcs --full-path -a --color never",
                     type = "anaconda",
                 },
                 pipx = {
